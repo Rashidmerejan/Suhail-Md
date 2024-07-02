@@ -37,4 +37,8 @@ jobs:
           pm2 save
           pm2 startup
           sudo env PATH=$PATH:/opt/hostedtoolcache/node/20.15.0/x64/bin /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/pm2/bin/pm2 startup systemd -u runner --hp /home/runner
-          
+
+      - name: Setup PM2 startup script
+        run: |
+          sudo env PATH=$PATH:/opt/hostedtoolcache/node/20.15.0/x64/bin /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/pm2/bin/pm2 startup systemd -u runner --hp /home/runner
+          echo "Setup PM2 startup script complete"

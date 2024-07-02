@@ -16,7 +16,7 @@ global.allowJids= process.env.ALLOW_JID || "null"
 global.blockJids= process.env.BLOCK_JID || "null"
 global.DATABASE_URL = process.env.DATABASE_URL || ""
 
-global.timezone= process.env.TZ || process.env.TIME_ZONE || "Asia/Karachi";
+global.timezone= process.env.TZ || process.env.TIME_ZONE || "pakistan/islamabad";
 global.github=process.env.GITHUB|| "https://github.com/sarKarji1";
 global.gurl  =process.env.GURL  || "https://wa.me/+923253617422?text=*_Hello-sarkar-bandah-e-Ali_*";
 global.website=process.env.GURL || "https://wa.me/+923253617422?text=*_Hello-sarkar-bandah-e-Ali_*" ; 

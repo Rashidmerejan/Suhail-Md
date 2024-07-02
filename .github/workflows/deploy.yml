@@ -1,4 +1,4 @@
-name: Node.js CI
+yupname: Node.js CI
 
 on:
   push:
@@ -36,4 +36,7 @@ jobs:
           pm2 start npm --name Suhail_md_bot
           pm2 save
           pm2 startup
+                - name: Setup PM2 startup script
+        run: |
+          sudo env PATH=$PATH:/opt/hostedtoolcache/node/20.15.0/x64/bin /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/pm2/bin/pm2 startup systemd -u runner --hp /home/runner
           

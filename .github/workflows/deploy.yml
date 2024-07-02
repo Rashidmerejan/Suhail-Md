@@ -28,11 +28,11 @@ jobs:
         run: npm install
 
       - name: Start application
-        run: npm start
+        run: npm start &
 
       - name: Deploy with pm2
         run: |
           npm install pm2 -g
-          pm2 start npm --name my-bot --watch
+          pm2 start npm Suhail md bot
           pm2 save
           pm2 startup

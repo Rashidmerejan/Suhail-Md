@@ -38,14 +38,11 @@ jobs:
           pm2 startup
           sudo env PATH=$PATH:/opt/hostedtoolcache/node/20.15.0/x64/bin /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/pm2/bin/pm2 startup systemd -u runner --hp /home/runner
 
-      - name: Print PM2 version
-        run: pm2 --version
+      - name: Print PM2 logs
+        run: pm2 logs
 
-      - name: Print startup command
-        run: echo "pm2 startup systemd -u runner --hp /home/runner"
-
-      - name: Run startup command manually
-        run: pm2 startup systemd -u runner --hp /home/runner
+      - name: Check PM2 status
+        run: pm2 status
 
       - name: Print system logs
         run: sudo journalctl -u pm2
@@ -54,4 +51,3 @@ jobs:
         run: |
           sudo env PATH=$PATH:/opt/hostedtoolcache/node/20.15.0/x64/bin /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/pm2/bin/pm2 startup systemd -u runner --hp /home/runner
           echo "Setup PM2 startup script complete"
-          

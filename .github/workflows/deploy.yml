@@ -27,25 +27,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Start application
+      - name: Start WhatsApp bot
         run: npm start &
 
-      - name: Deploy with pm2
+      - name: Deploy with PM2
         run: |
           npm install pm2 -g
-          pm2 start npm --name Suhail_md_bot
+          pm2 start npm --name WhatsAppBot
           pm2 save
           pm2 startup
           sudo env PATH=$PATH:/opt/hostedtoolcache/node/20.15.0/x64/bin /opt/hostedtoolcache/node/20.15.0/x64/lib/node_modules/pm2/bin/pm2 startup systemd -u runner --hp /home/runner
-
-      - name: Print PM2 logs
-        run: pm2 logs
-
-      - name: Check PM2 status
-        run: pm2 status
-
-      - name: Print system logs
-        run: sudo journalctl -u pm2
 
       - name: Setup PM2 startup script
         run: |

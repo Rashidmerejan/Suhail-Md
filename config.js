@@ -8,7 +8,7 @@ global.video= "" ;
 global.port =process.env.PORT
 global.appUrl=process.env.APP_URL || ""                       // put your app url here,
 global.email ="bandahealimaree@gmail.com"
-global.location="sindh,nawabshah."
+global.location="pakistan,nawabshah."
 
 
 global.mongodb= process.env.MONGODB_URI || "mongodb+srv://dadl:Iamdadl123@atlascluster.yv7hl0a.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster"

@@ -18,8 +18,8 @@ global.DATABASE_URL = process.env.DATABASE_URL || ""
 
 global.timezone= process.env.TZ || process.env.TIME_ZONE || "pakistan/islamabad";
 global.github=process.env.GITHUB|| "https://github.com/sarKarji1";
-global.gurl  =process.env.GURL  || "https://wa.me/+923253617422?text=*_Hello-sarkar-bandah-e-Ali_*";
-global.website=process.env.GURL || "https://wa.me/+923253617422?text=*_Hello-sarkar-bandah-e-Ali_*" ; 
+global.gurl  =process.env.GURL  || "https://wa.me/+923253617422?text=_Hello-sarkar-bandah-e-Ali_*";
+global.website=process.env.GURL || "*" ; 
 global.THUMB_IMAGE = process.env.THUMB_IMAGE || process.env.IMAGE || "https://telegra.ph/file/ecc2c6d2716127da71129.jpg" ; // SET LOGO FOR IMAGE 
 global.caption = process.env.CAPTION || global.caption || "`*_DOWNLOADED BY GUROJI_*`" 
 
